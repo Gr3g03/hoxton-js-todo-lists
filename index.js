@@ -28,13 +28,14 @@ let newId = []
 let promptID = prompt(`please enter a user ID`)
 newId.push(promptID)
 
-alert (`todo title is: ${todos[newId ].title} `)
+ if (users[newId]){
+    console.log(users[newId])
+ }else{
+     console.log(`you have enterd a worng ID please try again`);
+ }
 
-// if(newID === )
 
-// for(const promptId of todos ){
-//    todos.id
-// }
+
 
 
 
