@@ -17,6 +17,7 @@ and the city that this user live is : ${user.address.city}`
 alert(alertMesage)
 
 
+
 let newId = []
 let promptID = prompt(`please enter a user ID`)
 newId.push(promptID)
@@ -30,14 +31,37 @@ newId.push(promptID)
 
 
  //  - Display an alert with the username and all the todos titles that belong to that user 
-const showAlert = confirm(`do you want to see the todos titles?`)
+ let todoAlert = ''
+
+for(const todo of todos) {
+todoAlert += `This is the full To do title list :
+:${todo.title}`
+}
+alert(todoAlert)
+
+const showAlert = confirm(`do you want to see the todo title?`)
 
 if( showAlert){
 alert(`${users[newId].username}  ${todos[newId ].title}`)
 }
 
+let todoDeletId = []
+
+let deletedPrompt = prompt(`if you want to delete a todo please enter the ID  of the todo that you want to delete`)
+
+todoDeletId.push(deletedPrompt)
+
+delete todos[todoDeletId]
 
 
+confirm(`do you want to see another user?`)
+let seeAnotherUser = []
+let anotherUserId = prompt(`please enter a new user ID`)
+seeAnotherUser.push(anotherUserId)
+
+if(users[seeAnotherUser]){
+    console.log(users[seeAnotherUser])
+}
 
 
 
