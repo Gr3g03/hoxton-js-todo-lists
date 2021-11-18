@@ -1,10 +1,4 @@
-/* 
-- Display an alert with the username and all the todos titles that belong to that user 
-*/
 
-
-// - Create an alert that lists all users, with their ids, names and what city they're from
- 
 // ---- first alert 
 // for(const user of users) {
 // alert(` User ID :${user.id} 
@@ -23,7 +17,6 @@ and the city that this user live is : ${user.address.city}`
 alert(alertMesage)
 
 
-// - Prompt the user for a user id
 let newId = []
 let promptID = prompt(`please enter a user ID`)
 newId.push(promptID)
@@ -33,6 +26,15 @@ newId.push(promptID)
  }else{
      console.log(`you have enterd a worng ID please try again`);
  }
+
+
+
+ //  - Display an alert with the username and all the todos titles that belong to that user 
+const showAlert = confirm(`do you want to see the todos titles?`)
+
+if( showAlert){
+alert(`${users[newId].username}  ${todos[newId ].title}`)
+}
 
 
 
